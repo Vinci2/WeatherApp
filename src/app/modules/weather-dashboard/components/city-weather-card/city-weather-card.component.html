@@ -1,0 +1,10 @@
+<mat-card class="weather-card__main-container">
+    <mat-card-title>{{cityData.name}}</mat-card-title>
+    <mat-card-content>
+        <app-weather-icon [iconCode]="cityData.weather[0].icon"></app-weather-icon>
+        <div class="weather-card__description-container">
+            <app-temperature-description [temperatureData]="cityData.main"></app-temperature-description>
+            <app-wind-description [windData]="cityData.wind"></app-wind-description>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+.weather-card {
+    &__main-container {
+        text-align: center;
+        width: 250px;
+    }
+
+    &__description-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
