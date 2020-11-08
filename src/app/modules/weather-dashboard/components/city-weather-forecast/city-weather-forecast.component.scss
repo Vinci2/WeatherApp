@@ -1,0 +1,15 @@
+.hour-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 60px;
+    align-items: center;
+    font-size: 20px;
+}
+.main-container {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.city-name {
+    text-align: center;
+}

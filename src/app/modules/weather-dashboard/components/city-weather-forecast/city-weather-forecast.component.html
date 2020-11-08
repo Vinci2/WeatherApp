@@ -1,1 +1,9 @@
-<p>city-weather-forecast works!</p>
+<h1 class="city-name">{{cityName}}</h1>
+<div class="main-container">
+    <div class="hour-container" *ngFor="let hour of weatherForecast.hourly">
+        <span>{{computeTime(hour.dt) | date:'MMM d - hh:mm' }}</span>
+        <app-weather-icon [iconCode]="hour.weather[0].icon"></app-weather-icon>
+        <app-temperature-description [temperatureData]="hour"></app-temperature-description>
+        <app-wind-description [windData]="{deg: hour.wind_deg, speed: hour.wind_speed}"></app-wind-description>
+    </div>
+</div>

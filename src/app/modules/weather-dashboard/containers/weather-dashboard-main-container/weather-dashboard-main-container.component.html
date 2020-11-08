@@ -1,2 +1,9 @@
-<app-city-weather-forecast></app-city-weather-forecast>
-<app-cities-weather [citiesData]="citiesData$ | async"></app-cities-weather>
+<ng-container *ngIf="{
+    selectedCity: selectedCity$ | async
+} as sub">
+    <app-cities-weather [citiesData]="citiesData$ | async" [selectedCityId]="sub.selectedCity?.cityId"
+        (selectCity)="onSelectCity($event)">
+    </app-cities-weather>
+    <app-city-weather-forecast [weatherForecast]="cityForecast$ | async" [cityName]="sub.selectedCity?.name">
+    </app-city-weather-forecast>
+</ng-container>

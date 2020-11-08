@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wind-description',
@@ -6,16 +6,13 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./wind-description.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WindDescriptionComponent implements OnInit {
+export class WindDescriptionComponent {
   @Input() windData: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   public computeWindDirection(): string {
-   return `rotate(${this.windData.deg}deg)`;
+    return `rotate(${this.windData.deg}deg)`;
   }
+
+  public com
 
 }

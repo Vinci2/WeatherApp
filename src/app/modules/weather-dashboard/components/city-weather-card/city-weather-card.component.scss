@@ -2,6 +2,10 @@
     &__main-container {
         text-align: center;
         width: 250px;
+        cursor: pointer;
+        &--selected {
+            background-color: skyblue;
+        }
     }
 
     &__description-container {

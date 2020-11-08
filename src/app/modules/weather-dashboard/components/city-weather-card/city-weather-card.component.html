@@ -1,5 +1,6 @@
-<mat-card class="weather-card__main-container">
-    <mat-card-title>{{cityData.name}}</mat-card-title>
+<mat-card class="weather-card__main-container" [ngClass]="{'weather-card__main-container--selected': isSelected}"
+    (click)="onSelectCity()">
+    <mat-card-title>{{ cardTitle || cityData.name}}</mat-card-title>
     <mat-card-content>
         <app-weather-icon [iconCode]="cityData.weather[0].icon"></app-weather-icon>
         <div class="weather-card__description-container">

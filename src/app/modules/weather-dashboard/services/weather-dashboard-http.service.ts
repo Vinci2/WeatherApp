@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { CityDescriptor } from '../models/weather-dashboard-models';
 
 @Injectable({ providedIn: 'root' })
 export class WeatherDashboardHttpService {
@@ -21,7 +22,11 @@ export class WeatherDashboardHttpService {
         return this.httpClient.get(
             `http://api.openweathermap.org/data/2.5/group?id=${this.citiesIDs}&units=metric&appid=${this.OPEN_WEATHER_API_KEY}`
         );
-        // return this.httpClient.get(`http://api.openweathermap.org/data/2.5/weather?id=${this.londonID}&appid=${this.OPEN_WEATHER_API_KEY}`);
+    }
+
+    public fetchCityForecast(city: CityDescriptor): Observable<any> {
+        const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${city.lat}&lon=${city.lon}&units=metric&exclude=minutely,daily&appid=${this.OPEN_WEATHER_API_KEY}`;
+        return this.httpClient.get(url);
     }
 }
 

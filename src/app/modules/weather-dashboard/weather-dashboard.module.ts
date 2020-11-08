@@ -10,7 +10,6 @@ import { CityWeatherForecastComponent } from './components/city-weather-forecast
 import { CityWeatherCardComponent } from './components/city-weather-card/city-weather-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { WeatherIconComponent } from './components/weather-icon/weather-icon.component';
-import { WeatherDescriptionComponent } from './components/weather-description/weather-description.component';
 import { WindDescriptionComponent } from './components/wind-description/wind-description.component';
 import { MatIconModule } from '@angular/material/icon';
 import { TemperatureDescriptionComponent } from './components/temperature-description/temperature-description.component';
@@ -24,7 +23,6 @@ import { TemperatureDescriptionComponent } from './components/temperature-descri
     CityWeatherForecastComponent,
     CityWeatherCardComponent,
     WeatherIconComponent,
-    WeatherDescriptionComponent,
     WindDescriptionComponent,
     TemperatureDescriptionComponent],
   imports: [

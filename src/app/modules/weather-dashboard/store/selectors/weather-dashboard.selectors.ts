@@ -6,4 +6,5 @@ const weatherDashboardRoot = createFeatureSelector<WeatherDashboardState>(Weathe
 export const getIsFetchingData = createSelector(weatherDashboardRoot, (state) => state.isFetchingData);
 export const getSelectedCity = createSelector(weatherDashboardRoot, (state) => state.selectedCity);
 export const getCitiesData = createSelector(weatherDashboardRoot, (state) => state.citiesData);
+export const getCitiesForecast = createSelector(weatherDashboardRoot, (state) => state.citiesForecast);
 
